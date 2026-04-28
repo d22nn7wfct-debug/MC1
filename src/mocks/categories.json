@@ -1,0 +1,17 @@
+[
+  { "id": "cat-1", "name": "Смартфоны", "nameEn": "Smartphones" },
+  { "id": "cat-2", "name": "Ноутбуки", "nameEn": "Laptops" },
+  { "id": "cat-3", "name": "Планшеты", "nameEn": "Tablets" },
+  { "id": "cat-4", "name": "Наушники", "nameEn": "Headphones" },
+  { "id": "cat-5", "name": "Умные часы", "nameEn": "Smartwatches" },
+  { "id": "cat-6", "name": "Телевизоры", "nameEn": "TVs" },
+  { "id": "cat-7", "name": "Фотоаппараты", "nameEn": "Cameras" },
+  { "id": "cat-8", "name": "Игровые консоли", "nameEn": "Gaming Consoles" },
+  { "id": "cat-9", "name": "Мониторы", "nameEn": "Monitors" },
+  { "id": "cat-10", "name": "Клавиатуры", "nameEn": "Keyboards" },
+  { "id": "cat-11", "name": "Мыши", "nameEn": "Mice" },
+  { "id": "cat-12", "name": "Колонки", "nameEn": "Speakers" },
+  { "id": "cat-13", "name": "Принтеры", "nameEn": "Printers" },
+  { "id": "cat-14", "name": "Роутеры", "nameEn": "Routers" },
+  { "id": "cat-15", "name": "Внешние накопители", "nameEn": "External Storage" }
+]

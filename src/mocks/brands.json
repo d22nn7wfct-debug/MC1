@@ -1,0 +1,17 @@
+[
+  { "id": "brand-1", "name": "Apple" },
+  { "id": "brand-2", "name": "Samsung" },
+  { "id": "brand-3", "name": "Xiaomi" },
+  { "id": "brand-4", "name": "Sony" },
+  { "id": "brand-5", "name": "LG" },
+  { "id": "brand-6", "name": "Asus" },
+  { "id": "brand-7", "name": "Lenovo" },
+  { "id": "brand-8", "name": "HP" },
+  { "id": "brand-9", "name": "Dell" },
+  { "id": "brand-10", "name": "Acer" },
+  { "id": "brand-11", "name": "Huawei" },
+  { "id": "brand-12", "name": "Microsoft" },
+  { "id": "brand-13", "name": "Canon" },
+  { "id": "brand-14", "name": "Nikon" },
+  { "id": "brand-15", "name": "JBL" }
+]

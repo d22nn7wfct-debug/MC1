@@ -1,0 +1,70 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# SPA fallback: любые маршруты отдают index.html (на будущее, под React Router).
+# Ассеты из /assets/* и реальные файлы Netlify отдаёт раньше этого правила.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+# Явные MIME-типы для JS-модулей и ассетов.
+# Решает ошибку "Failed to load module script: Expected a JavaScript-or-Wasm module script
+# but the server responded with a MIME type of 'application/octet-stream'".
+#
+# Универсальные правила для всего сайта (не только /assets/) — на случай, если
+# Vite или manualChunks разместят чанки в корне или другой подпапке.
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+
+[[headers]]
+  for = "/*.mjs"
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Content-Type = "text/css; charset=utf-8"
+
+# Конкретно для /assets/ — добавляем long-term immutable cache (Vite хеширует имена).
+[[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*.mjs"
+  [headers.values]
+    Content-Type = "application/javascript; charset=utf-8"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*.css"
+  [headers.values]
+    Content-Type = "text/css; charset=utf-8"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*.svg"
+  [headers.values]
+    Content-Type = "image/svg+xml"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/assets/*.woff2"
+  [headers.values]
+    Content-Type = "font/woff2"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Fallback для остальных файлов в /assets/ (изображения, шрифты не из списка выше).
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
